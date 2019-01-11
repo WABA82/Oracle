@@ -1,0 +1,184 @@
+쌍용교육_곽우신_rurouni5181@daum.net
+
+2018.10.22
+
+was-web app server 구조 찾아보기
+
+oracle.com - 오라클 DBMS 다운
+
+오라클 설치 주의사항
+
+- 폴더명 : 영어
+- 컴퓨터명 : 영어
+- OS가 없는 드라이버에 설치하기
+- 문자는 UTF8
+- managerum, tiger
+
+
+------------------------------------------------------------------------------------------------------------
+
+*수업 내용(한달치)
+
+DBMS - 설치, create(테이블 생성), insert(삽입), select(조회), update, delete, drop, select(조건절), 
+
+	함수, subquery, constraints(제약사항), union, join, index(빠른 검색을 위한...)
+
+
+PL/SQL - 기본문법, cursor(여러행 조회), function, procedure, package, trigger
+
+	* 데이터 베이스는 배울때는 쉽고 쓸때 어려움 *
+
+-------------------------------------------------------------------------------------------------------------
+
+*DBMS (Data Base Management System) _ 컴퓨터에서 사용할 수 있게 저장된 Data Base.
+
+ -목적 : 과거의 데이터를 사용해서 미래를 예측하기 위함
+
+ -특징 : 공용데이터, 실시간 데이터, 내용에 의한 참조, 통합데이터
+
+ -Data : 수, 문자, 이미지로 된 자료(연구/조사에 대한 기본 재료)
+
+ -Data Base : 체계적으로 정리된 Data
+
+ -프로그램(관계형 데이터 베이스) : 오라클, DB2(가성비), MS-SQL, MySQL(무료-PHP와 자주사용, 작은 데이터를 가장 빠르게 처리), SyBase... 
+
+ -Data Base : 테이블에 저장 RDBMS(관계형 데이터 베이스)
+
+ -table(표) : 데이터 베이스를 저장
+
+ -table을 조작하는 명령 언어 : SQL (Structured Query Language)
+
+ -SQL : ANSI 쿼리: 미국표준(기본 바탕).
+
+	제조사 쿼리: 제조사 편의성을 고려하여 만든 SQL문.
+
+
+ -SQL문 종류 :
+
+ _조작어DML : Data Manipulation Language - insert, update, delete, select 
+
+ _제어어DCL : Data Control Language - commit,rollbak, grant, revoke
+
+ _정의어DDL : Data Definition Language - create, drop, alter
+
+*(CEO Larry Ellison)오라클 : 대용량 데이터를 처리할 때 사용한는 DBMS, 컴퓨터 한대에 하나만 동작 가능(SID)
+
+
+ -DB Server와 DB client로 분할 설치
+
+ DB Server 정보저장, 제공
+
+ DB client 정보사용
+
+-----------------------------------------------------------------------------------------------------------------------------
+ 
+ -오라클g version 동작 구조
+
+ 영속적인 저장 File 영역
+
+ .DBF : 데이터 저장
+
+ .LOG : 실행된 쿼리문을 저장
+
+ .CTL : Schema 운영시 사용할 객체정보
+
+
+ 일시적인 저장 Memory 속도가 빠름-Server Instance(실행중 프로그램 SID구분)-OracleServiceORCL
+ 
+ 접속자 Session(컴퓨터끼리의 연결) : 접속자가 사용하는 영역
+
+ REDO log : 실행된 쿼리문을 메모리에 저장
+
+ Shared Pool : 쿼리문의 실행계획을 세움
+
+
+ Server Process(서버 인스턴스를 사용하기 위한 Socket Program)-OracleOraDb11g_home1TNSListener
+
+ 접속자를 받아서, 인증수행, 쿼리문 검증, 대문자로 변경
+
+ Server --------------------------------------------------------------------------------------------------- Client
+
+ Client Process
+
+ -sqlplus.exe : 서버 프로세스에 접속해서  데이터를 주고 받는 일.
+
+
+*오라클 서비스 종료(서버 인스턴스)_sql shell
+ 
+ -관리자 계정만 가능 : 
+ 
+ DOS : 도스창에서 sqlplus"/as sysdba"
+ 
+ 서비스 종료 : shutdown abort
+
+ 서비스 시작 : statup
+ 
+
+*오라클 리스너 종료(서버 프로세스)_lsnrctl.exe
+
+ -관리자 권한을 가진 도스창에서만 가능
+
+ 서비스 종료 : stop
+
+ 서비스 시작 : stat
+ 
+---------------------------------------------------------------------------------------------------------------------
+	쿼리문
+
+*sqlplus.exe 사용법
+
+ -접속 : sqlplus.exe -> 계정: 비번: 
+
+ -계정&비번 노출 -> sqlplus "계정명/비번"
+
+
+SQL문 DML, DCL, DDL - 작성시 주의 사항 : 컬럼명, 테이블명, 쿼리문에 대해서는 대소문자를 가리지 않는다. 값에 대해서는 대소문자를 가린다. '문자열'에서는 가린다.
+SQL문이 종료되면 ; 넣는다.
+
+sqlplus - oracle tool인 sqlplus.exe에서 제공하는 명령 : 문장 끝에 ;를 사용하지 않는다.
+
+exit, column, col, show, desc, edit(ed)
+
+*쿼리문 create
+
+ -DDL : 
+ 
+ -생성할 때 사용(table, index, 계정생성, sequence, view, function...)
+
+ -Transaction 대상쿼리가 아니다.
+
+*Table 생성_데이터 베이스를 저장
+
+ -create table 테이블명(영어 대문자) : 컬럼명 데이터형(크기) column level 제약사항(constranit 제약사항명 제약사항)
+
+
+*Data Type_값을 구분해서 저장하기 위한 예약된 공간들.
+
+숫자형 : 정수형_number/실수형_number
+
+문자형 : 고정길이형_char/가변길이형_var char2
+
+날짜형 : date
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
