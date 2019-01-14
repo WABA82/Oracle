@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="8" version="2.0">
+<workbench progressCount="16" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="362" y="-30">
+<window height="1047" width="1237" x="-7" y="0">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -26,16 +26,12 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="com.tomato.exerd.editor.DiagramEditor" name="test2.exerd" partName="test2.exerd" path="C:/dev/query/workspace/erd_prj/test2.exerd" title="test2.exerd" tooltip="erd_prj/test2.exerd" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/erd_prj/test2.exerd"/>
-</editor>
-<editor activePart="true" focus="true" id="com.tomato.exerd.editor.DiagramEditor" name="test3.exerd" partName="test3.exerd" path="C:/dev/query/workspace/erd_prj/test3.exerd" title="test3.exerd" tooltip="erd_prj/test3.exerd" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/erd_prj/test3.exerd"/>
+<editor activePart="true" focus="true" id="com.tomato.exerd.editor.DiagramEditor" name="DoSiLak.exerd" partName="DoSiLak.exerd" path="C:/dev/query/workspace/erd_prj/DoSiLak.exerd" title="DoSiLak.exerd" tooltip="erd_prj/DoSiLak.exerd" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/erd_prj/DoSiLak.exerd"/>
 </editor>
 </editors>
 <views>
@@ -48,14 +44,16 @@
 <element path="/erd_prj"/>
 </expanded>
 <selection>
-<element path="/erd_prj/test2.exerd"/>
+<element path="/erd_prj"/>
 </selection>
 </viewState>
 </view>
 <view id="com.tomato.exerd.ui.views.thumbnail" partName="썸네일">
 <viewState/>
 </view>
-<view id="com.tomato.exerd.validate.ui.ValidateView" partName="검토"/>
+<view id="com.tomato.exerd.validate.ui.ValidateView" partName="검토">
+<viewState/>
+</view>
 <view id="com.tomato.exerd.modelview3.ModelView3" partName="모델">
 <viewState/>
 </view>
@@ -175,6 +173,7 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd_prj/test1.exerd"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd_prj/test2.exerd"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd_prj/test3.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd_prj/DoSiLak.exerd"/>
 </editors>
 <item historyLabel="test.exerd" index="0"/>
 <item historyLabel="reverse.exerd" index="1"/>
@@ -201,7 +200,8 @@
 <item historyLabel="test2.exerd" index="3"/>
 <item historyLabel="test3.exerd" index="4"/>
 <item historyLabel="test2.exerd" index="3"/>
-<item active="true" historyLabel="test3.exerd" index="4"/>
+<item historyLabel="test3.exerd" index="4"/>
+<item active="true" historyLabel="DoSiLak.exerd" index="5"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -219,6 +219,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="DoSiLak.exerd" tooltip="erd_prj/DoSiLak.exerd">
+<persistable path="/erd_prj/DoSiLak.exerd"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="test3.exerd" tooltip="erd_prj/test3.exerd">
 <persistable path="/erd_prj/test3.exerd"/>
 </file>
